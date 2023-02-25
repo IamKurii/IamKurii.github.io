@@ -1,136 +1,118 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>FEDERICOSCHI.</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Comfortaa:700" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <link href="./pointer.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <link rel="stylesheet" href="index.css">
-    <link rel="shortcut icon" type="image/jpg" href="img/favicon.ico" />
+	<meta charset="utf-8">
+	<title>IamKurii</title>
+	<style>
+		body {
+			background-color: #5b98b0;
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+		}
+		
+		canvas {
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+	</style>
 </head>
-
 <body>
-    <div id="loading">
-        <div id="spinner"></div>
-    </div>
-    <div id="particles-js"></div>
-    <div id="box">
-        <div class="box1 onlywide animated bounceOutLeft" style="animation-delay:1.7s;"></div>
-        <div class="box2 onlywide animated bounceOutLeft" style="animation-delay:1.8s;"></div>
-        <div class="box2 onlywide animated bounceOutLeft" style="animation-delay:1.9s;"></div>
-        <div class="box2 animated bounceOutRight" style="animation-delay:1.9s;"></div>
-        <div class="box2 onlywide animated bounceOutRight" style="animation-delay:1.8s;"></div>
-        <div class="box2 onlywide animated bounceOutRight" style="animation-delay:1.7s;"></div>
-    </div>
-    <!-- <a id="about" onclick="showabout()" class="animated fadeIn" style="animation-delay:2.2s;">about</a>
-    <a id="work" onclick="showwork()" class="animated fadeIn" style="animation-delay:2.2s;">work</a> -->
-    <a id="contact" onclick="showcontact()" class="animated fadeIn" style="animation-delay:2.2s;">contact</a>
-    <div id="middle" class="animated slideInDown" style="animation-delay:2.0s;">
-        <h1 id="main">federicoschi</h1>
-        <p>SrAdmin CoralMC
-            <br /> & Translator @MoonsworthLLC / @LunarClient
-        </p>
-        <div id="menu">
-            <a onclick="showabout()">about me</a>
-            <a onclick="showwork()">my work</a>
-            <a onclick="showcontact()">contact me</a>
-        </div>
-        <table>
-            <tr>
-                <td class="animated zoomIn" style="animation-delay:2.2s;"><a class="social" href="https://t.me/FEDERICOSCHIDDER"><i class="fab fa-telegram"></i></a></td>
-                <td class="animated zoomIn" style="animation-delay:2.4s;"><a class="social" href="https://twitter.com/FEDERICOSCHI_"><i class="fab fa-twitter"></i></a></td>
-                <td class="animated zoomIn" style="animation-delay:2.6s;"><a class="social" href="https://github.com/FEDERICOSCHI"><i class="fab fa-github"></i></a></td>
-            </tr>
-        </table>
-    </div>
-    <div id="work_container" class="container">
-        <div onclick="closework()"><i class="fas fa-angle-right"></i></div>
-        <h1>works.</h1>
-        <section>
-            <h2>work title</h2>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
-            <div id="used">
-                <div><i class="fas fa-circle"></i>&nbsp;HTML5</div>
-                <div><i class="fas fa-circle"></i>&nbsp;CSS3</div>
-                <div><i class="fas fa-circle"></i>&nbsp;Javascript</div>
-            </div>
-            <button class="btn_one">button 1</button>
-            <button class="btn_two">button 2</button>
-        </section>
-    </div>
-    <div id="about_container" class="container">
-        <div onclick="closeabout()"><i class="fas fa-angle-left"></i></div>
-        <h1>about.</h1>
-        <section>
-            <h2>about me</h2>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing
-                elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            </p>
-        </section>
-        <section>
-            <h2>skills</h2>
-            <p>
-                <h5>asd</h5>
-            </p>
-        </section>
-    </div>
-    </div>
+  <h1><center> STAFF EXPERIENCES<center></h1>
+    <hr> <br>
+    <p> <center><h1> <img src="img/axe.png" alt="0"> MINECRAFT EXPERIENCE <img src="img/axe.png" alt="0"></h1> <br>
+      - Creeply Network: Admin ss. <br>
+      - CoralMC: Helper supporter. <br>
+      - TangerineMC: Helper ss. <br>
+      - Omnicraft: Helper supporter & Helper ss. <br>
+      - Pmcraft: Helper supporter/ss & Mod & Admin & Gestore Staff & Owner. <br>
+      - Novaworld: Helper ss. <br>
+      - Ninfea: Helper ss. <br>
+      - CryptoMine: Helper supporter. <br>
+      - AquaticMc: Helper supporter. <br>
+      - MagicPvP: Helper supporter. <br>
+      
+      <h1><img src="img/ds.png" alt="0"> DISCORD EXPERIENCE <img src="img/ds.png" alt="0"></h1>
+      Este's Valley: Helper. <br>
+      PvP Hub: Helper & T-Mod & Mod & SrMod & Admin & Manager. <br>
+      Magic Development: Mod. <br>
+      CraftByte Studios: Mod. <br>
+      Development Accademy: Owner.</center></p>
 
-    <link rel="stylesheet" href="./style.css">
-    <div id="contact_container" class="container">
-        <div onclick="closecontact()"><i class="fas fa-angle-down"></i></div>
-        <h1>contact me</h1>
-        <section>
-            <p>
+      <tr>
+        <td class="animated zoomIn" style="animation-delay:2.2s;"><a class="social" href="https://t.me/IamKuriii"><i class="fab fa-telegram"></i></a></td>
+        <td class="animated zoomIn" style="animation-delay:2.6s;"><a class="social" href="https://github.com/IamKurii"><i class="fab fa-github"></i></a></td>
+        <td class="animated zoomIn" style="animation-delay:2.6s;"><a class="social" href="https://www.youtube.com/channel/UC6edqMLb8gzrPiqV7Ei4_kg"><i class="fab fa-youtube"></i></a></td>
 
-                <form action="https://formspree.io/f/xvololqb" method="POST">
+	<canvas id="myCanvas"></canvas>
 
-                    <lab for="fullname">Name</lab>
-                    <input class="inputfield" type="text" name="name" class="name">
-
-                    <lab for="email">Email Adress</lab>
-                    <input class="inputfield" type="email" name="email">
-
-                    <lab for="message">Message</lab>
-                    <input class="inputfield" type="message" name="message">
-
-                    <button class="button" type="submit" value="Send">Send</button>
-
-
-                </form>
-
-            </p>
-        </section>
-    </div>
-    <div id="footer">
-        made on earth by a human <br> <a href="https://federicoschi.systems">FEDERICOSCHI</a>
-    </div>
-    <script src="index.js" type="text/javascript"></script>
-    <script src="particles.js"></script>
-    <script src="app.js"></script>
-    <script src="./pointer.js"></script>
-    <script>
-        init_pointer({
-            pointerColor: "rgb(255, 50, 50)", // Css color
-            ringSize: 15, // Pixels
-            ringClickSize: 10 // Pixels when clicking
-        })
-    </script>
+	<script>
+		// impostazioni delle particelle
+		var particleCount = 100;
+		var particleRadius = 3;
+		var particleSpeed = 0.7;
+		
+		// colori delle particelle
+		var colors = ["#FFFFFF"];
+		
+		// creazione del canvas
+		var canvas = document.getElementById("myCanvas");
+		var ctx = canvas.getContext("2d");
+		canvas.width = window.innerWidth;
+		canvas.height = window.innerHeight;
+		
+		// creazione delle particelle
+		var particles = [];
+		for (var i = 0; i < particleCount; i++) {
+			var particle = {
+				x: Math.random() * canvas.width,
+				y: Math.random() * canvas.height,
+				vx: (Math.random() - 0.5) * particleSpeed,
+				vy: (Math.random() - 0.5) * particleSpeed,
+				color: colors[Math.floor(Math.random() * colors.length)]
+			};
+			particles.push(particle);
+		}
+		
+		// animazione delle particelle
+		function animate() {
+			requestAnimationFrame(animate);
+			
+			// cancellazione del canvas
+			ctx.clearRect(0, 0, canvas.width, canvas.height);
+			
+			// disegno delle particelle
+			for (var i = 0; i < particles.length; i++) {
+				var particle = particles[i];
+				
+				ctx.beginPath();
+				ctx.arc(particle.x, particle.y, particleRadius, 0, Math.PI * 2);
+				ctx.fillStyle = particle.color;
+				ctx.fill();
+				
+				// aggiornamento della posizione delle particelle
+				particle.x += particle.vx;
+				particle.y += particle.vy;
+				
+				// rimbalzo delle particelle sui bordi del canvas
+				if (particle.x < 0 || particle.x > canvas.width) {
+					particle.vx = -particle.vx;
+				}
+				if (particle.y < 0 || particle.y > canvas.height) {
+					particle.vy = -particle.vy;
+				}
+			}
+		}
+		
+		// avvio dell'animazione
+		animate();
+	</script>
 </body>
-
 </html>
+
+
+
+
+
